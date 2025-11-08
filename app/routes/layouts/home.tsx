@@ -1,5 +1,13 @@
 import { Outlet } from "react-router";
 import Hero from "../components/Hero";
+import type { Route } from "../about/+types";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "The Friendly Dev" },
+    { name: "description", content: "My website project portfolio" },
+  ];
+}
 
 const HomeLayout = () => {
     return (
